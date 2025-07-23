@@ -31,10 +31,20 @@ This project is the **enhanced and complete version**, incorporating data cleani
 - Loaded cleaned and transformed data into Power BI Data Model
 
 ### 5. DAX Measures Used
-- `Total Sales = SUM(Sales[Total Amount])`
-- `Average Order Value = [Total Sales] / DISTINCTCOUNT(Sales[Order ID])`
-- `Total Quantity = SUM(Sales[Quantity])`
-- `Top Category = CALCULATE(MAX(Sales[Category]), ...)`
+-- 1. Average Order Value (AOV)
+AOV = ROUND([sales]/COUNTROWS(Orders_Table), 2)
+
+-- 2. Total Sales
+sales = SUMX(Orders_Table, Orders_Table[transaction_qty] * RELATED(Products_Table[unit_price]))
+
+-- 3. Sales from Coffee Category
+sales_coffee = CALCULATE([sales], Products_Table[product_category] = "Coffee")
+
+-- 4. Total Products
+total_products = COUNTROWS(Products_Table)
+
+-- 5. Total Quantity Sold
+total_quantity = SUM(Orders_Table[transaction_qty])
 
 ---
 
