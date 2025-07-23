@@ -43,7 +43,7 @@ This project is the **enhanced and complete version**, incorporating data cleani
 - 4. Total Products
 -total_products = COUNTROWS(Products_Table)
 
--- 5. Total Quantity Sold
+- 5. Total Quantity Sold
 -total_quantity = SUM(Orders_Table[transaction_qty])
 
 ---
