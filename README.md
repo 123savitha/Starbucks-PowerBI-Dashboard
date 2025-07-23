@@ -14,8 +14,8 @@ This project is the **enhanced and complete version**, incorporating data cleani
 ## 🔄 Workflow
 
 ### 1. Dataset Collection
-- **Source:** Starbucks Raw Sales Data (CSV format)
-- Contains: Order ID, Product Type, Category, Store Location, Quantity, Unit Price, Total Amount, Date, etc.
+- **Source:** Starbucks Raw Sales Data (CSV format/Excel format)
+- Contains: Order ID, Product_Id,Product Type, Category, Store Location, Quantity, Unit Price, Total Amount,transaction_Qty,transaction_Date, Size,Product_type, etc.
 
 ### 2. Data Cleaning
 - Removed null values and duplicates
